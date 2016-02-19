@@ -1,0 +1,922 @@
+
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+	    <!-- WRAPPER INVISIBLE HEADER START -->
+	      
+        <!-- Adobe Dynamic Tag Manager Loader Code-->
+             <script src="//assets.adobedtm.com/a3a673425858388bc1b1e0ed01eb252ad8ce12e0/satelliteLib-1401ce0fc9dae9e8602fcc34896d0a249c42abb2.js"></script>
+        <!-- End of Dynamic Tag Manager Loader Code-->
+
+   <!--NON-RESPONSIVE WRAPPER -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="Wrapper" content="yes" />
+        
+	<!-- JQUERY 1.11  AND NI.JS CONTAIN LOADER AND NAME-->
+	<script src="http://www.ni.com/niassets/jquery/js/jquery.min.js"></script>
+	 <!--  we need these patches because things like auto-complete, global gateway and UP use them -->
+	<script src="http://www.ni.com/niassets/jquery/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="http://www.ni.com/niassets/jquery/js/ni.js"></script>
+
+       
+	<!-- LATEST COMPILED AND MINIFIED BOOTSTRAP CSS & JS -->
+	<link rel="stylesheet" href="http://www.ni.com/niassets/bootstrap/css/bootstrap.min.css">
+	<script src="http://www.ni.com/niassets/bootstrap/js/bootstrap.min.js"></script>
+	
+	<!-- jQuery UI JS & CSS KEEPING OLD CSS FOR OLD PNX STYLES-->
+	  <link rel="stylesheet" type="text/css" href="http://www.ni.com/widgets/jqueryui/1.9.2/css/ni/jquery-ui.css"> 
+	  <script src="http://www.ni.com/widgets/pnx/1.0/js/jquery-ui-1.9.2.js"></script>
+
+	<!--CSS FOR WRAPPER-->
+	  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic&subset=latin,greek,greek-ext,latin-ext' rel='stylesheet' type='text/css'>
+	  <link rel="stylesheet" type="text/css" href="http://www.ni.com/niassets/autocomplete/css/jqueryui.autocomplete.css">
+		 
+
+
+      <!-- pnx framework -->
+	<link rel="stylesheet" type="text/css" href="http://www.ni.com/widgets/pnx/1.0/css/base.css" />
+	<link rel="stylesheet" type="text/css" href="http://www.ni.com/widgets/pnx/1.0/css/containers.css" />
+	<link rel="stylesheet" type="text/css" href="http://www.ni.com/widgets/pnx/1.0/css/content-blocks.css" />
+	<link rel="stylesheet" type="text/css" href="http://www.ni.com/widgets/pnx/1.0/css/icons.css" />
+	<link rel="stylesheet" type="text/css" href="http://www.ni.com/widgets/pnx/1.0/css/buttons.css" />
+	<link rel="stylesheet" type="text/css" href="http://www.ni.com/widgets/pnx/1.0/css/icon-fonts.css">
+     
+     <!-- NON RESPONSIVE CSS -->
+	<link rel="stylesheet" type="text/css" href="http://www.ni.com/niassets/wrapper/css/non-responsive.min.css">
+	
+	
+   
+	 
+	 <!--JS FOR WRAPPER-->
+	  <script src="http://www.ni.com/niassets/wrapper/js/utils.js"></script>
+	  <script src="http://www.ni.com/niassets/wrapper/js/up-data-dt.js"></script>
+	  <script src="http://www.ni.com/niassets/wrapper/js/wrapper.js"></script>
+	  <script src="http://www.ni.com/niassets/wrapper/js/cartCount.js"></script>
+	  <script src="http://www.ni.com/niassets/jquery/js/jquery.accordion.js"></script>
+
+	<!--JS FOR AUTOCOMPLETE-->
+	 <script src="http://www.ni.com/niassets/jquery/js/jquery.cookie.js"></script>
+	 <script src="http://www.ni.com/niassets/autocomplete/js/pnx.autocomplete.js"></script>
+	 <script src="http://www.ni.com/niassets/js/jquery.dotdotdot.min.js"></script>
+	
+    
+
+	    <!-- WRAPPER INVISIBLE HEADER END -->
+		<script type="text/javascript"><!--
+
+            // Load the files
+            NI.require({
+                css: [
+					"http://www.ni.com/widgets/jqueryui/1.8.5/css/ni/jquery-ui-1.8.5.css",
+					"http://www.ni.com/widgets/pnx/1.0/css/messaging.css",
+					"http://www.ni.com/css/global/neutral/editmode.css",
+					"http://www.ni.com/css/whitepaper/wp.base.css",
+                ],
+                js: [
+ 			        "http://www.ni.com/widgets/jqueryui/1.8.5/js/jquery-ui-1.8.5.custom.min.js",
+			        "http://www.ni.com/javascript/global/neutral/breadcrumbs.js",
+			        "http://www.ni.com/white-paper/js/dzutil.js",
+			        "http://www.ni.com/widgets/pnx/1.0/js/collapse.js"
+                ]
+			}, 
+			function() {
+				$('.review-trigger').click(function() {
+					$('.customer-reviews').trigger('click');					
+				});
+				imageEnchanter("[+] Enlarge Image", "en", "white-paper");
+			    $('.collapse').collapse({
+	                collapsibleContent: '.collapse-content',
+	                onOpen: function(){$("#attachments").find(".collapse").addClass('pnx-block-1x');},
+	                onClose: function(){$("#attachments").find(".collapse").removeClass('pnx-block-1x');}
+			    });
+            });
+            
+		
+//--></script>
+		<style><!--
+
+			@media screen {
+				#readin-widget{
+					display: inline;
+				}
+			}
+			@media print {
+				#readin-widget{
+					display: none;
+				}
+		
+--></style>
+		<link rel="stylesheet" type="text/css" href="http://www.ni.com/css/whitepaper/wp.print.css" media="print" />
+	            <title>3 Hidden Oscilloscope Specs That Really Matter - National Instruments</title>
+	                
+	            <link rel="canonical" href="http://www.ni.com/white-paper/53038/en/" />
+	            <meta name="DCSext.DocType" content="NI_Supported" /> 
+	            
+	            <meta name="NiBoosts" content="UD:2016-02-02,RV:0.00,RN:0" />
+	            <meta name="nigen16" content="0.00" /> <!-- Rating -->
+	            
+	            <meta name="ContentType" content="white-paper" />
+	            <meta name="Section" content="products" />
+	            <meta name="PageType" content="leaf" />
+                <meta name="DeliveredBy" content="Generic Delivery Container" />
+                <meta name="ShortTitle" content="3 Hidden Oscilloscope Specs That Really Matter" />
+	            <meta name="Language" scheme="rfc3066" content="en" />
+                <meta name="Description" content="All oscilloscopes are listed with specifications like sampling rate, bandwidth, and voltage range, but are those the best specifications to use when you choose a new instrument? Al..." />
+	            <meta name="Keywords" content="oscilloscope; scope; specs; specifications; frequency; SINAD; ENOB; SNR; THD;" />
+                <meta name="Date" scheme="iso8601" content="2016-02-01T20:51:57" />
+                <meta name="UpdateDate" scheme="iso8601" content="2016-02-02T21:15:14" />
+                <meta name="robots" content="index,follow" />
+	            <meta name="ProductCategories" content="40,3465,42,7" />
+	            <meta name="Country" />
+
+                <meta name="DocType" content="NI_Supported" />	            
+	            <meta name="ContentFormat" content="VCM" />	            
+	            
+	            <meta name="nigen1" content="ATE/Instrumentation,Aerospace/Avionics,Automotive,Consumer Goods,Electronics,Government/Defense,Manufacturing,RF/Communications,Research,Semiconductor" /> <!-- industry -->
+	            <meta name="nigen2" content="Signal Acquisition &amp; Generation,ResearchTest" />  <!-- application -->
+	            <meta name="nigen3" content="measurementandinstrumentation" /> <!-- developmentTopic -->
+	            <meta name="nigen4" content="" /> <!-- Technology -->
+	            <meta name="nigen5" /> <!-- Hardware Family -->
+	            <meta name="nigen6" /> <!-- Application Software -->
+	            <meta name="nigen10" content="40,3465,42,7" /> <!-- All Product categories (For Tutorials it nigen10 =  ProductCategories  -->
+	            <meta name="nigen17" content="" /> <!-- Download link -->
+	            <meta name="nigen23" content="Tutorial" /> <!-- Format classification -->
+	            <meta name="PdfFileName" content="NI-Tutorial-53038-en" />
+		
+	</head>
+	<body>
+		<a id="top"></a>
+		<div class="pnx-page-wrap grid16">
+			<!-- PNX-HEADER START -->
+				  
+ 
+
+
+
+
+
+ 
+
+
+ 
+
+		
+
+
+
+
+
+ 
+ 
+
+
+ 
+
+    
+
+
+<div class="ni-wrapper-header noindex">
+ <!--Fixed nav bar only visible in lg and medium devices-->
+   <nav class="navbar navbar-default navbar-fixed-top">
+     <!--Main Navigation Content-->
+  <div class="container-fluid">
+        <div class="row">
+ 
+ 
+    <div class="col-md-5 col-xs-4">
+	 <a href="http://www.ni.com/en-us.html" class="navbar-brand"></a>
+    </div>
+            
+	    <div class="col-md-7 pull-right">
+		<ul class="nav nav-pills utility-nav pull-right">
+		 <!--Global Gateway component-->
+   
+<li class="hidden-xs utils-gg">
+
+<a href="#" class="global-gateway"><span class="country">Choose your country</span>
+                </a>
+   <!-- global gateway panel -->
+   
+        <div class="gg-panel hidden-xs">
+            <div>
+	      <div class="col-sm-6">
+	       <ul>
+                           <li>
+                             <a href="#" data-locale="en-AU">Australia</a>
+                            </li>
+                           <li>
+                             <a href="#" data-locale="pt-BR">Brasil</a>
+                            </li>
+                           <li>
+                             <a href="#" data-locale="en-CA">Canada (English)</a>
+                            </li>
+                           <li>
+                             <a href="#" data-locale="fr-CA">Canada (Français)</a>
+                            </li>
+                           <li>
+                             <a href="#" data-locale="de-DE">Deutschland</a>
+                            </li>
+                           <li>
+                             <a href="#" data-locale="es-ES">España</a>
+                            </li>
+                           <li>
+                             <a href="#" data-locale="fr-FR">France</a>
+                            </li>
+                           <li>
+                             <a href="#" data-locale="en-IN">India</a>
+                            </li>
+                           <li>
+                             <a href="#" data-locale="it-IT">Italia</a>
+                            </li>
+                           <li>
+                             <a href="#" data-locale="hu-HU">Magyarország</a>
+                            </li>
+                           <li>
+                             <a href="#" data-locale="en-MY">Malaysia</a>
+                            </li>
+                           <li>
+                             <a href="#" data-locale="es-MX">México</a>
+                            </li>
+                           <li>
+                             <a href="#" data-locale="nl-NL">Nederland</a>
+                            </li>
+	        </ul>
+	      </div>
+	       <div class="col-sm-6">
+	       <ul>
+		         <li>
+			   <a href="#" data-locale="de-AT">Österreich</a>
+		         </li>
+		         <li>
+			   <a href="#" data-locale="pl-PL">Polska</a>
+		         </li>
+		         <li>
+			   <a href="#" data-locale="de-CH">Schweiz</a>
+		         </li>
+		         <li>
+			   <a href="#" data-locale="en-SG">Singapore</a>
+		         </li>
+		         <li>
+			   <a href="#" data-locale="fr-CH">Suisse</a>
+		         </li>
+		         <li>
+			   <a href="#" data-locale="sv-SE">Sverige</a>
+		         </li>
+		         <li>
+			   <a href="#" data-locale="en-GB">United Kingdom</a>
+		         </li>
+		         <li>
+			   <a href="#" data-locale="en-US">United States</a>
+		         </li>
+		         <li>
+			   <a href="#" data-locale="ru-RU">Российская Федерация</a>
+		         </li>
+		         <li>
+			   <a href="#" data-locale="zh-CN">中国 (China)</a>
+		         </li>
+		         <li>
+			   <a href="#" data-locale="ja-JP">日本 (Japan)</a>
+		         </li>
+		         <li>
+			   <a href="#" data-locale="ko-KR">대한민국 (Korea)</a>
+		         </li>
+		         <li>
+			   <a href="#" data-locale="zh-TW">台灣 (Taiwan)</a>
+		         </li>
+	        </ul></div>
+	 
+	    </div>
+	    <div>
+	      <div class="col-sm-12 gg-panel-bottom ">
+                           <a href="http://www.ni.com/global-gateway/" class="global-gateway"> <strong>See All Countries</strong></a>
+                  
+	      </div>
+	    </div>
+           
+            </div>
+		 <!--User Profile component-->
+		<li class="hidden-xs myaccount-utility">
+			<span class="pull-left user"></span>
+			<span class="global-header-nav-up-wrap"></span>
+		</li>		      
+		 <!--Shopping Cart component-->
+ 
+     <li class="cart cart-badge" data-badge="0"><a href="http://sine.ni.com/apps/utf8/nios.store?action=view_cart&amp;loc=en-US">&nbsp;</a></li>
+ 
+ 
+		 <!--Search Button-->
+
+<li class="visible-xs search search-box" role="button" data-toggle="modal" data-target="#wrapperSearchModal">
+   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 800 600" enable-background="new 0 0 800 600" xml:space="preserve">
+   <g id="XMLID_1_">
+	   <g>
+		   <path fill="#FFFFFF" d="M637.27,499.09l-38.18,38.18L413.64,351.82c-27.28,19.09-60,30-95.459,30    c-90,0-163.63-73.641-163.63-163.64c0-90,73.63-163.63,163.63-163.63c90,0,163.64,73.63,163.64,163.63    c0,35.46-10.91,68.18-30,95.459L637.27,499.09z M454.55,218.18c0-76.36-60-136.36-136.37-136.36c-76.36,0-136.36,60-136.36,136.36    c0,76.37,60,136.37,136.36,136.37C394.55,354.55,454.55,294.55,454.55,218.18z"/>
+	   </g>
+   </g>
+   </svg>
+</li>
+
+	
+		
+	<div class="modal fade modalsearch" id="wrapperSearchModal" tabindex="-1" role="dialog" aria-labelledby="wrapperSearchModal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<form id="autoComplete-global" name="autoComplete-global" class="pnx-form" type="GET" action="http://search.ni.com/nisearch/app/main">
+					<div class="autoCompleteItem-global">
+						<div class="input-group stylish-input-group">
+							<input placeholder="" class="niAutocompleteInput" data-search-type="globalSearch" type="text" id="n33_autoCompleteInput"  name="q" />
+							<input type="hidden" name="pg" id="pg" value="1"/>
+							<input type="hidden" name="sn" id="sn" value=""/>
+							<span class="input-group-addon">
+							   <button type="submit">
+								  <span class="search search-icon">
+									 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 800 600" enable-background="new 0 0 800 600" xml:space="preserve">
+									 <g id="XMLID_1_">
+										 <g>
+											 <path fill="#FFFFFF" d="M637.27,499.09l-38.18,38.18L413.64,351.82c-27.28,19.09-60,30-95.459,30    c-90,0-163.63-73.641-163.63-163.64c0-90,73.63-163.63,163.63-163.63c90,0,163.64,73.63,163.64,163.63    c0,35.46-10.91,68.18-30,95.459L637.27,499.09z M454.55,218.18c0-76.36-60-136.36-136.37-136.36c-76.36,0-136.36,60-136.36,136.36    c0,76.37,60,136.37,136.36,136.37C394.55,354.55,454.55,294.55,454.55,218.18z"/>
+										 </g>
+									 </g>
+									 </svg>
+								  </span>
+							   </button>  
+							</span>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div> 
+				
+ 
+		 <!--Nav Toggle Button-->
+	 <!--Navbar toggle box component/button-->
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		     <span class="sr-only">Toggle navigation</span>
+		     <span class="icon-bar"></span>
+		     <span class="icon-bar"></span>
+		     <span class="icon-bar"></span>
+		  </button>
+		</ul>
+	     
+		
+	    </div>
+         </div>
+         
+         <div class="row">
+ 
+		 <div class="col-md-8 col-sm-9 pull-left col-xs-12">
+		     <div id="navbar" class="navbar-collapse collapse">
+			 <ul class="nav navbar-nav">
+			    <li class="innovations ">
+			 
+				
+				   <a href="http://www.ni.com/en-us/innovations.html">INNOVATIONS</a>
+			         </li>
+			    <li class="products  current">
+			 
+				
+				   <a href="http://www.ni.com/en-us/shop.html">SHOP</a>
+			         </li>
+			    <li class="support ">
+			 
+				
+				   <a href="http://www.ni.com/en-us/support.html">SUPPORT</a>
+			         </li>
+			    <li class="community ">
+			 
+				
+				   <a href="http://www.ni.com/en-us/community.html">COMMUNITY</a>
+			         </li>
+		<li class="nav-myaccount visible-xs" >
+		    <span class="pull-left user"></span>
+			<div class="mobile-nav-up-wrap"></div>
+		</li>
+ 
+    
+     <li class="nav-global-gateway visible-xs">
+      <a href="http://www.ni.com/global-gateway/" class="global-gateway"><span>United States</span></a>
+    
+       <!-- global gateway panel -->
+	
+      
+       </li>
+			         
+			 </ul>
+			  <div class="hidden-sm hidden-xs" id="navSlider">&nbsp;</div>
+		     </div>
+		        
+		     <!--/.nav-collapse -->
+		 </div>
+ 	                                            		 
+ 	<div class="col-md-4 col-sm-3 pull-right col-xs-4 global-header-search">
+		<div class="hidden-xs pull-right">
+			<form id="autoComplete-global" name="autoComplete-global" class="pnx-form" type="GET" action="http://search.ni.com/nisearch/app/main">
+				<div class="autoCompleteItem-global">
+					<div class="input-group stylish-input-group">
+					<!--     <input type="text" placeholder="" class="form-control">-->
+					<input placeholder="" class="niAutocompleteInput pull-right" data-search-type="globalSearch" type="text" id="n33_autoCompleteInput"  name="q" />
+					<input type="hidden" name="pg" id="pg" value="1"/>
+					<input type="hidden" name="sn" id="sn" value=""/>
+						<span class="input-group-addon">
+						   <button type="submit">
+						      <span class="search search-icon">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px" viewBox="0 0 800 600" enable-background="new 0 0 800 600" xml:space="preserve">
+									 <g id="XMLID_1_">
+										 <g>
+											 <path fill="#065FA3" d="M637.27,499.09l-38.18,38.18L413.64,351.82c-27.28,19.09-60,30-95.459,30    c-90,0-163.63-73.641-163.63-163.64c0-90,73.63-163.63,163.63-163.63c90,0,163.64,73.63,163.64,163.63    c0,35.46-10.91,68.18-30,95.459L637.27,499.09z M454.55,218.18c0-76.36-60-136.36-136.37-136.36c-76.36,0-136.36,60-136.36,136.36    c0,76.37,60,136.37,136.36,136.37C394.55,354.55,454.55,294.55,454.55,218.18z"/>
+										 </g>
+									 </g>
+								</svg>
+							  </span>
+						   </button>  
+						</span>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+            
+	 
+	    
+        </div>
+	
+   </div>
+ 
+    </nav>
+
+</div>
+
+<!--NI#include virtual="/ssi/downtime/downtime_main_en.htm" -->
+            <div class="container global-header-breadcrumb">
+                
+            </div>
+
+
+
+			<!-- PNX-HEADER END -->
+			<span class="no-print">
+				<input type="hidden" id="breadcrumbsJSON" value="{&quot;breadcrumbs&quot; : [{&quot;label&quot; : &quot;Home&quot;, &quot;link&quot; : &quot;http://www.ni.com/&quot;}, {&quot;label&quot; : &quot;Products and Services&quot;, &quot;link&quot; : &quot;http://www.ni.com/products&quot;}, {&quot;label&quot; : &quot;White Papers&quot;, &quot;link&quot; : &quot;http://www.ni.com/white-papers/&quot;}, {&quot;label&quot; : &quot;3 Hidden Oscilloscope Specs That Really Matter&quot;, &quot;link&quot; : &quot;#&quot;}]}" />
+				<input type="hidden" id="originalURL" value="http://ws-cl-community-ext-prod.natinst.com/white-paper/app/main/p/lang/en/id/53038/urlsrc/rewrite/" />				
+			</span>
+			<!-- CONTENT START -->
+            <div class="pnx-content clearfix">
+	            <div class="grid12 left">	            
+	            
+	                <!-- Main content -->
+			<div class="clearfix pnx-block-2x ">
+				    <h1 class="wp-title">3 Hidden Oscilloscope Specs That Really Matter</h1>
+	        <div class="wp-publishinfo pnx-block-2x noindex">Publish Date: Feb 02, 2016
+				<span class="no-print">
+					|
+		0 Ratings | <strong>0.00</strong> out of 5
+				          
+			           					
+				</span>            
+	        </div>
+					<h2>Overview</h2>
+					<div class="pnx-block-2x">All oscilloscopes are listed with specifications like sampling rate, bandwidth, and voltage range, but are those the best specifications to use when you choose a new instrument? Although these are important pieces of information to have about a new piece of equipment, understanding the quality of an oscilloscope requires reading a little further into the user manual. See why the effective number of bits (ENOB), passband flatness, and -3 dB filter roll-off may be the most important specs you aren’t looking at.</div>
+                <div>
+                <a href="http://www.ni.com/digitizers/" class="ni-uppercase ni-btn ni-btn-secondary">
+            <span class="pnx-btn">
+                <span class="pnx-btn-text"> 
+                    Explore NI oscilloscopes
+                  </span> 
+            </span>
+                </a></div>
+                <p>&#160;</p>
+					
+				<div id="primarycontentcontainer" class="tutorial-body"><h2>Effective Number of Bits</h2>
+
+<p>ENOB of an oscilloscope is the actual measurement resolution after you have accounted for the distortion, noise effects, and spurs of the instrument. ENOB gives a much more accurate representation of the measurement performance of an oscilloscope than the resolution printed on the front panel or in the data sheet and is calculated directly from the signal-to-noise-and-distortion (SINAD) specification. Noise and device spurs are embedded into the measurements your oscilloscope takes and add voltage offsets and frequency components that are not part of the signal of interest.</p>
+
+<p>&#160;</p>
+
+<p style=" text-align: center;"><img src="http://www.ni.com/cms/images/devzone/tut/ENOBandSFDR.small.png" alt="" /></p>
+
+<div style="width:80%; margin:0 auto;">
+<p align="center"><em><b>Figure 1</b> Effective number of bits (ENOB) is a measure of oscilloscope resolution that takes noise and spurs of the instrument into account.</em></p>
+</div>
+<p>&#160;</p>
+                    
+<div style="float:right; width:275px; font-size:1.75em; color:#6AA239; margin:0 0 5px 5px; padding:7px; border-left:#a5a4a4 4px solid; border-radius:15px;">Don’t trust the resolution number on your oscilloscope’s front panel</div>
+                    
+<p>Instrument vendors can improve ENOB by using cutting-edge analog-to-digital converters with very low noise density and implementing advanced algorithms for data correction. When choosing a new oscilloscope look for one with a high ENOB, SINAD, or spurious free dynamic range (SFDR) specification to get the best measurement performance. The <a href="http://sine.ni.com/nips/cds/view/p/lang/en/nid/212657">PXIe-5171R oscilloscope</a> from NI is an example of a 14-bit oscilloscope that has relatively high ENOB (11-bit). NI also offers the industry-leading <a href="http://sine.ni.com/nips/cds/view/p/lang/en/nid/201603">PXI-5922 flex resolution oscilloscope</a> with 16 to 24-bit resolution and unparalleled spectral performance of up to 105 dB SINAD.</p>
+
+<p>&#160;</p>
+
+<p>Learn more about calculating ENOB and SFDR in the white paper, <a href="http://www.ni.com/white-paper/3359/en/">Understanding Frequency Performance Specifications</a>.</p>
+
+<p>&#160;</p>
+
+<h2>Are you getting consistent amplitude measurements?</h2>
+
+<p>Don’t assume you are getting consistent amplitude measurements across your oscilloscope’s frequency range. The passband flatness specification is the consistency of amplitude measurements throughout the frequency measurement range of an oscilloscope. An oscilloscope with exceptional flatness will have little change in measured amplitude of the same voltage level at all frequencies it is specified to measure.</p>
+
+<p>&#160;</p>
+
+<p style=" text-align: center;"><img src="http://www.ni.com/cms/images/devzone/tut/Flatness.small.png" alt="" /></p>
+
+<div style="width:80%; margin:0 auto;">
+<p align="center"><em><b>Figure 2</b>. The typical frequency response of an oscilloscope (red) deviates greatly from the ideal, theoretical frequency response (grey) within the operating frequency of the oscilloscope, which can result in inaccurate measurements.</em></p>
+</div>
+
+<p>&#160;</p>
+
+<p>You can check this by looking at the frequency response Bode plot of the oscilloscope, signal-to-noise ratio or SFDR at multiple frequencies and observing the differences in the numbers, or the flatness specification of an instrument. An instrument with good flatness allows you to make measurements at any frequencies and compare data with minimal correction for frequency, which makes correlation easier and faster.</p>
+
+<p>&#160;</p>
+
+<p>An example of an oscilloscope with excellent passband flatness is the 1.5 GHz, 10-bit PXIe-5162 oscilloscope. See the Bandwidth and Transient Response section of the <a href="http://www.ni.com/pdf/manuals/373858d.pdf">PXIe-5162 specification document</a>.</p>
+
+<p>&#160;</p>
+
+<h2>-3 dB Filter Roll-Off</h2>
+                    
+<div style="float:right; width:275px; font-size:1.75em; color:#6AA239; margin:0 0 5px 5px; padding:7px; border-left:#a5a4a4 4px solid; border-radius:15px;">The bandwidth spec on your oscilloscope doesn’t mean that high-frequency signals disappear</div>
+                    
+<p>When you use oscilloscopes as precise amplitude or frequency measurement devices, the inclusion of harmonic components and noise spurs can adversely affect measurements. All oscilloscopes have analog bandwidth specifications defined by the -3 dB point, but something that you should be more aware of is how much your measurements are being affected by signals beyond the specified bandwidth. Signals that occur in the extended operating frequencies of an oscilloscope can appear in the region that you are measuring through aliasing. You can combat these effects by using an oscilloscope with anti-aliasing filters for your particular region of interest or by finding an oscilloscope with a sharper filter roll-off, typically about -20 dB per decade.</p>
+
+<p>&#160;</p>
+<div style="width:80%; margin:0 auto;">
+<p style=" text-align: center;"><img src="http://www.ni.com/cms/images/devzone/tut/Roll-Off.small.png" alt="" /></p>
+
+
+<p align="center"><em><b>Figure 3</b>. The bandwidth spec on your oscilloscope doesn’t mean that high-frequency signals disappear. Oscilloscopes with poor -3 dB roll-off performance permit signals from outside of the operating frequency range to erroneously appear in the measurement spectrum.</em></p>
+</div>
+
+<p>&#160;</p>
+
+<p>An oscilloscope with an excellent low-pass filter response will roll off significantly after the -3 dB point. If the filter does not have adequate roll-off performance, spectral measurements can be significantly altered by aliased signals in the region of interest.</p>
+
+<p>&#160;</p>
+
+<p>To learn more about aliasing and the Nyquist theory of sampling, see <a href="http://www.ni.com/white-paper/2709/en/">Acquiring an Analog Signal: Bandwidth, Nyquist Sampling Theorem, and Aliasing</a>.</p>
+
+<p>&#160;</p>
+
+
+                  <!--  <hr style="width:90%;" />
+                    <p>&#160;</p>
+<a href="http://www.ni.com/digitizers/" class="ni-uppercase ni-btn ni-btn-secondary">
+            <span class="pnx-btn">
+                <span class="pnx-btn-text"> 
+                    Learn about the fundamentals of oscilloscope operation
+                  </span> 
+            </span>
+        </a>
+  <p>&#160;</p>
+<a href="http://www.ni.com/digitizers/" class="ni-uppercase ni-btn ni-btn-secondary">
+            <span class="pnx-btn">
+                <span class="pnx-btn-text"> 
+                    Purchase NI oscilloscopes
+                  </span> 
+            </span>
+        </a>-->
+
+    <div style="margin:10px 0; padding:10px; background-color:#E7E7E7; border-radius:0 0 15px 15px; border-top:5px #6e6e6e solid;">
+                    <h2>Learn More</h2>
+<ul class="pnx-bulleted-list">
+<li>Learn about the fundamentals of oscilloscope operation and performance in the <a href="http://www.ni.com/white-paper/3214/en/">Instrument Fundamentals series</a>.</li>
+
+<li>See all of the <a href="http://www.ni.com/digitizers/">oscilloscopes that NI offers</a> and find the one that meets your needs.</li>
+</ul>
+</div>
+				</div>
+				
+			</div>
+				
+					
+					<!-- Comments -->
+				</div>	        	     
+				<div class="grid4 right clearfix no-print noindex">
+					<div class="pnx-container-group">     
+					
+					    <!-- Document Social Bar -->         
+						<div class="pnx-container">
+							<h3>Bookmark &amp; Share</h3>
+							<div class="pnx-sidebar-content">
+								<div class="docbox">
+                <script src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4d9f12be33ab9b64" type="text/javascript" charset="utf-8"><!--
+
+//--></script>
+		<script src="/widgets/share/addthis/1.0/js/share.js" type="text/javascript" charset="utf-8"><!--
+<!--//-->
+//--></script>
+                
+                <div class="social-share-wrapper">
+                    <div class="addthis_toolbox addthis_default_style socialMedia-toolbar">
+                        <a href="http://www.addthis.com/bookmark.php?v=250&amp;pubid=ra-4d9f12be33ab9b64" class="addthis_button_compact" style="margin-right: 6px">Share</a>	
+                        <a class="addthis_button_facebook"></a>
+                        <a class="addthis_button_twitter"></a>
+                        <a class="addthis_button_linkedin"></a>
+                    </div>
+                </div>
+								</div>
+							</div>
+						</div>
+						<hr />
+						<!-- Attachments -->
+						
+						<!-- Rating Form -->
+						<div class="pnx-container">
+							<h3>Ratings</h3>
+							<div class="pnx-sidebar-content">
+		<script type="text/javascript"><!--
+
+		//<![CDATA[
+			function validateAndSubmitRating(form)
+			{
+			  message = validateRatingFields(form);
+			  if (message.length == 0)
+			  {
+					form.p_url.value = form.p_url.value + form.p_rank.value;
+					form.submit();
+			  }
+			  else
+			  {
+			    alert(message);
+			  }
+			}
+			
+			function validateRatingFields(form)
+			{
+			  message = "";
+			  if (form.p_rank.selectedIndex == 0)
+			  {
+				  message = message + "Please choose a rating value.\r\n";
+			  }
+			  return message;
+			}
+			
+			function radioButtonChecked(button)
+			{
+			  var radio_choice = false;
+			  for (counter = 0; counter < button.length && !radio_choice; counter++)
+			  {
+			    radio_choice = button[counter].checked;
+			  }
+			  return radio_choice;
+			}
+			//]]>
+		
+//--></script>
+		        
+			<form action="/white-paper/feedback" method="post" name="ratingform">
+                                <input type="hidden" name="p_guid" value="dztut-53038|en" />
+                <input type="hidden" name="p_url_root" value="http://sine.ni.com" />
+				<input type="hidden" name="p_url" value="http://www.ni.com/white-paper/53038/en/rating/" />
+				<input type="hidden" name="p_rating_type" value="DZTUT" />
+				   <p class="pnx-block-1x">Rate this document<br />			
+				   <select name="p_rank">
+				           <option selected="true">Select a Rating</option>
+					   <option value="1">1 - Poor</option>
+					   <option value="2">2</option>
+					   <option value="3">3</option>
+					   <option value="4">4</option>
+					   <option value="5">5 - Excellent</option>
+				   </select>
+				   </p>
+				   <p class="pnx-block-1x">Answered Your Question?<br />
+				   <input type="radio" name="p_answer" value="yes" /> Yes  
+				   <input type="radio" name="p_answer" value="no" /> No 
+				   </p>
+				   <p><a class="pnx-btn pnx-btn-nav" href="javascript:validateAndSubmitRating(document.forms.ratingform);"> <span class="pnx-btn-text"> Submit </span></a></p>
+			</form>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<!-- CONTENT END -->
+			
+			<!-- PNX-FOOTER START -->
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <!-- FOOTER -->
+   <!-- THIS EXTRA DIV IS TO ACCOMODATE IE8 that doesn't recognize "footer" -->
+   <div class="footer noindex">
+	<div class="container-fluid">
+	  <div class="row clearfix" >
+		<!--Footer Nav component -->
+   <div class="hidden-xs footer-nav col-sm-12 col-md-9 col-lg-9">
+    <div class="col1of3 left">
+      <h4>PRODUCT</h4>
+      <ul>
+          <li>
+            <a href="http://www.ni.com/status/">Order status and history</a>
+          </li>
+          <li>
+            <a href="http://sine.ni.com/apps/utf8/nios.store?action=purchase_form">Order by part number</a>
+          </li>
+          <li>
+            <a href="http://sine.ni.com/myproducts/app/main.xhtml?lang=en">Activate a product</a>
+          </li>
+          <li>
+            <a href="http://www.ni.com/how-to-buy/">Order and payment information</a>
+          </li>
+      </ul>
+    </div>
+    <div class="col1of3 left">
+      <h4>SUPPORT</h4>
+      <ul>
+          <li>
+            <a href="https://sine.ni.com/srm/app/myServiceRequests">Submit a service request</a>
+          </li>
+          <li>
+            <a href="http://www.ni.com/manuals/">Manuals</a>
+          </li>
+          <li>
+            <a href="http://www.ni.com/downloads/drivers/">Drivers</a>
+          </li>
+          <li>
+            <a href="http://www.ni.com/alliance/">Alliance Partners</a>
+          </li>
+      </ul>
+    </div>
+    <div class="col1of3 left">
+      <h4>COMPANY</h4>
+      <ul>
+          <li>
+            <a href="http://www.ni.com/company/">About National Instruments</a>
+          </li>
+          <li>
+            <a href="http://www.ni.com/events/">Events</a>
+          </li>
+          <li>
+            <a href="http://www.ni.com/careers/">Careers</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+		<!--Footer Nav component mobile -->
+  <!-- Accordion for xs devices-->
+  <div class="visible-xs col-xs-12 panel-section">
+    <div class="panel-group" id="accordion">
+      <div class="panel inactive panel-default">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><h4 class="panel-title">PRODUCT</h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse">
+          <div class="panel-body">
+            <ul>
+                <li>
+                  <a href="http://www.ni.com/status/">Order status and history</a>
+                </li>
+                <li>
+                  <a href="http://sine.ni.com/apps/utf8/nios.store?action=purchase_form">Order by part number</a>
+                </li>
+                <li>
+                  <a href="http://sine.ni.com/myproducts/app/main.xhtml?lang=en">Activate a product</a>
+                </li>
+                <li>
+                  <a href="http://www.ni.com/how-to-buy/">Order and payment information</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="panel inactive panel-default">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><h4 class="panel-title">SUPPORT</h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse">
+          <div class="panel-body">
+            <ul>
+                <li>
+                  <a href="https://sine.ni.com/srm/app/myServiceRequests">Submit a service request</a>
+                </li>
+                <li>
+                  <a href="http://www.ni.com/manuals/">Manuals</a>
+                </li>
+                <li>
+                  <a href="http://www.ni.com/downloads/drivers/">Drivers</a>
+                </li>
+                <li>
+                  <a href="http://www.ni.com/alliance/">Alliance Partners</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="panel inactive panel-default">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><h4 class="panel-title">COMPANY</h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse">
+          <div class="panel-body">
+            <ul>
+                <li>
+                  <a href="http://www.ni.com/company/">About National Instruments</a>
+                </li>
+                <li>
+                  <a href="http://www.ni.com/events/">Events</a>
+                </li>
+                <li>
+                  <a href="http://www.ni.com/careers/">Careers</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+            
+		<div class="motto-table col-xs-12 col-sm-12 col-md-3 col-lg-3">
+		  <!--Motto component -->
+ <div class="motto">
+   <h4>MISSION</h4>
+   <p>NI equips engineers and scientists with systems that accelerate productivity, innovation, and discovery.</p>
+ </div>
+          
+		  <!-- TRUSTe logo visible just for xs devices -->
+		  <div class="visible-xs">
+			<!--TRUSTe logo component -->
+<a class="truste-image" href="http://privacy.truste.com/privacy-seal/National-Instruments-Corporation/validation?rid=bc6daa8f-7051-4eea-b7b5-fb24dcd96d95" target="_blank">
+  <img class="img-responsive" src="http://www.ni.com//www.ni.com/niassets/icons/truste_seal.png" alt="TRUSTe"/>
+</a>
+          
+		  </div>
+		  <!--Social Media component -->
+
+<div class="footer-social-media">
+    <a href="http://twitter.com/niglobal"><i class="footer-social twitter"></i></a>     
+    <a href="http://www.facebook.com/NationalInstruments"><i class="footer-social facebook"></i></a>     
+    <a href="http://www.linkedin.com/company/3433?trk=tyah"><i class="footer-social linkedin"></i></a>     
+    <a href="http://www.ni.com/rss/"><i class="footer-social feeds"></i></a>     
+    <a href="http://www.youtube.com/nationalinstruments"><i class="footer-social youtube"></i></a>     
+</div>
+          
+		</div>
+	  </div>
+	  <div class="row clearfix legal" >
+		<!--Legal component -->
+  <!--Contact Us component-->
+ <div class="hidden-xs col-xs-3 col-xs-push-9 contact-us col-sm-2 col-sm-push-10 col-md-3 col-md-push-9 col-lg-3 col-lg-push-9">
+   <strong><a href="http://www.ni.com/contact-us/">Contact Us</a></strong>
+ </div>          
+  <div class="hidden-xs col-xs-9 col-xs-pull-3 col-sm-10 col-sm-pull-2 col-md-9 col-md-pull-3 col-lg-9 col-lg-pull-3">
+    <!--TRUSTe logo component-->
+    <div class="left">
+<a class="truste-image" href="http://privacy.truste.com/privacy-seal/National-Instruments-Corporation/validation?rid=bc6daa8f-7051-4eea-b7b5-fb24dcd96d95" target="_blank">
+  <img class="img-responsive" src="http://www.ni.com/niassets/icons/truste_seal.png" alt="TRUSTe"/>
+</a>
+          
+    </div>
+    <div class="left legal-copy">
+        <strong><a href="http://www.ni.com/legal/">Legal</a></strong>
+      <span class="pipe">|</span> &copy <span id="copyright"> </span>  National Instruments. All rights reserved.
+      <span class="pipe">|</span> <strong><a href="http://www.ni.com/help/map.htm">Site map</a></strong>
+    </div>
+  </div>
+		<div class="visible-xs contact-us col-xs-12">
+		  <!--Legal component mobile -->
+    <!--Contact Us component mobile-->
+ <p><strong><a href="http://www.ni.com/contact-us/">Contact Us</a> or Call (800) 531-5066</strong></p>
+    <p>
+        <strong><a href="http://www.ni.com/legal/">Legal</a></strong>
+      <span class="pipe">|</span> &copy <span id="copyright"> </span>  National Instruments. All rights reserved. National Instruments. All rights reserved.
+      <span class="pipe">|</span> <strong><a href="http://www.ni.com/help/map.htm">Site map</a></strong>
+    </p>          
+		</div>
+	  </div>
+	</div>
+  </footer>
+  </div>
+
+			<!-- PNX-FOOTER END -->
+			
+			<!-- PNX-INVISIBLE-FOOTER START -->
+				
+
+
+   <!--FOR ADOBE DYNAMIC TAG MANAGER-->
+
+    <script type="text/javascript">_satellite.pageBottom();</script>
+
+			<!-- PNX-INVISIBLE-FOOTER END -->
+				
+		</div>	
+	</body>	
+</html>
