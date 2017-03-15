@@ -473,18 +473,12 @@
 				<span class="no-print">
 					|
 		0 Ratings | <strong>0.00</strong> out of 5
-				          					
+				          | 
+			            <a href="http://www.ni.com/white-paper/53038/en/pdf"><img src="/images/global/us/icons/pdf.gif" width="16" height="16" border="0" style="padding:1px;margin-bottom:0px" /> PDF</a>					
 				</span>            
 	        </div>
 					<h2>Overview</h2>
-					<div class="pnx-block-2x">All oscilloscopes are listed with specifications like sampling rate, bandwidth, and voltage range, but are those the best specifications to use when you choose a new instrument? Although these are important pieces of information to have about a new piece of equipment, understanding the quality of an oscilloscope requires reading a little further into the user manual. See why the effective number of bits (ENOB), passband flatness, and -3 dB filter roll-off may be the most important specs you aren’t looking at.
-                <div style="font-size:1.155em; color:#323232; padding:15px 0; text-align:center;">
-    <div style="float:left; margin-right:20px;"><a href="http://www.ni.com/digitizers/" target="_blank" class="pnx-btn pnx-btn-primary"><span class="pnx-btn-text">Explore NI oscilloscopes</span></a></div>
-    &#160;
-    <div style="float:left;"><a href="http://ohm.ni.com/advisors/pxi/pages/common/intro.xhtml" target="_blank" class="pnx-btn pnx-btn-primary"><span class="pnx-btn-text">Build your PXI system</span></a></div>             
-</div>
-                
-                </div>  
+					<div class="pnx-block-2x">All oscilloscopes are listed with specifications like sampling rate, bandwidth, and voltage range, but are those the best specifications to use when you choose a new instrument? Although these are important pieces of information to have about a new piece of equipment, understanding the quality of an oscilloscope requires reading a little further into the user manual. See why the effective number of bits (ENOB), passband flatness, and -3 dB filter roll-off may be the most important specs you aren’t looking at.</div>  
                 
                 <!--<div><a href="http://www.ni.com/digitizers/" target="_blank" class="ni-uppercase ni-btn ni-btn-secondary"><span class="pnx-btn"><span class="pnx-btn-text">Explore NI oscilloscopes</span></span></a></div>-->
                 
@@ -494,7 +488,12 @@
 <li><a href="#toc3">-3 dB Filter Roll-Off</a></li>
 <li><a href="#toc4">Next Steps</a></li>
 </ol> 
-                 
+                 <div style="float:right; font-size:1.155em; color:#323232; background-color:#E7E7E7; margin:0 0 5px 5px; padding:5px 15px 15px; border-radius:0 0 15px 15px; border-top:5px #6e6e6e solid; text-align:center;">
+    <h3>Shop Now</h3>
+    <div><a href="http://www.ni.com/digitizers/" target="_blank" class="pnx-btn pnx-btn-primary"><span class="pnx-btn-text">Explore NI oscilloscopes</span></a></div>
+    &#160;
+    <div><a href="http://ohm.ni.com/advisors/pxi/pages/common/intro.xhtml" target="_blank" class="pnx-btn pnx-btn-primary"><span class="pnx-btn-text">Build your PXI system</span></a></div>             
+</div>
 				<div id="primarycontentcontainer" class="tutorial-body">
                     <h2>Effective Number of Bits</h2>
                     
@@ -503,14 +502,14 @@
 
 <p>&#160;</p>
 
-<p style=" text-align: center;"><img src="1085_8880_iso_mi.png" alt="" /></p>
+<p style=" text-align: center;"><img src="http://www.ni.com/cms/images/devzone/tut/ENOBandSFDR.small.png" alt="" /></p>
 
 <div style="width:80%; margin:0 auto;">
-<p align="center"><em><b>Figure 1.</b> Effective number of bits (ENOB) is a measure of oscilloscope resolution that takes noise and spurs of the instrument into account.</em></p>
+<p align="center"><em><b>Figure 1</b> Effective number of bits (ENOB) is a measure of oscilloscope resolution that takes noise and spurs of the instrument into account.</em></p>
 </div>
 <p>&#160;</p>
                     
-<div style="float:right; width:275px; font-size:1.75em; color:#82AED1; margin:0 0 5px 25px; padding:2px 7px; border-left:#B2B2B2 3px solid;">Don’t trust the resolution number on your oscilloscope’s front panel</div>
+<div style="float:right; width:275px; font-size:1.75em; color:#6AA239; margin:0 0 5px 5px; padding:7px; border-left:#a5a4a4 4px solid; border-radius:15px;">Don’t trust the resolution number on your oscilloscope’s front panel</div>
                     
 <p>Instrument vendors can improve ENOB by using cutting-edge analog-to-digital converters with very low noise density and implementing advanced algorithms for data correction. When choosing a new oscilloscope look for one with a high ENOB, SINAD, or spurious free dynamic range (SFDR) specification to get the best measurement performance. The <a href="http://sine.ni.com/nips/cds/view/p/lang/en/nid/212657">PXIe-5171R oscilloscope</a> from NI is an example of a 14-bit oscilloscope that has relatively high ENOB (11-bit). NI also offers the industry-leading <a href="http://sine.ni.com/nips/cds/view/p/lang/en/nid/201603">PXI-5922 flex resolution oscilloscope</a> with 16 to 24-bit resolution and unparalleled spectral performance of up to 105 dB SINAD.</p>
 
@@ -544,7 +543,7 @@
 
 <h2>-3 dB Filter Roll-Off</h2>
                     
-<div style="float:right; width:275px; font-size:1.75em; color:#009900; margin:0 0 5px 25px; padding:2px 7px; border-left:#B2B2B2 3px solid;">The bandwidth spec on your oscilloscope doesn’t mean that high-frequency signals disappear</div>
+<div style="float:right; width:275px; font-size:1.75em; color:#6AA239; margin:0 0 5px 5px; padding:7px; border-left:#a5a4a4 4px solid; border-radius:15px;">The bandwidth spec on your oscilloscope doesn’t mean that high-frequency signals disappear</div>
                     
 <p>When you use oscilloscopes as precise amplitude or frequency measurement devices, the inclusion of harmonic components and noise spurs can adversely affect measurements. All oscilloscopes have analog bandwidth specifications defined by the -3 dB point, but something that you should be more aware of is how much your measurements are being affected by signals beyond the specified bandwidth. Signals that occur in the extended operating frequencies of an oscilloscope can appear in the region that you are measuring through aliasing. You can combat these effects by using an oscilloscope with anti-aliasing filters for your particular region of interest or by finding an oscilloscope with a sharper filter roll-off, typically about -20 dB per decade.</p>
 
@@ -585,7 +584,7 @@
             </span>
         </a>-->
 
-    <div style="margin:10px 0; padding:10px; background-color:#E5E5E5; border-top:5px #6e6e6e solid;">
+    <div style="margin:10px 0; padding:10px; background-color:#E7E7E7; border-radius:0 0 15px 15px; border-top:5px #6e6e6e solid;">
                     <h2>Learn More</h2>
 <ul class="pnx-bulleted-list">
 <li>Learn about the fundamentals of oscilloscope operation and performance in the <a href="http://www.ni.com/white-paper/3214/en/">Instrument Fundamentals series</a>.</li>
